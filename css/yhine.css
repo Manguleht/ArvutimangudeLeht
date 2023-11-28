@@ -1,0 +1,26 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', monospace; /* Retro monospace font */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p, .score {
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+ 
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column; /* Stack the boxes vertically */
+}
+
+.title {
+    color: #ffcc00; /* Retro yellow color for titles */
+}

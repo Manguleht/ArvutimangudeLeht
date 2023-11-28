@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
-  <title>Arvutimängud</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link rel="stylesheet" type="text/css" href="css/yhine.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Review Website</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/yhine.css">
+  
 </head>
 <body>
+    <h1>Game Review Website</h1>
+    <div class="container" id="reviewContainer">
+        <div class="review">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJGRLVE3QDrm-yEBXOrClQ6wUdoJ_hyP93NYDOVzbXoEL6foDjD1WmGleaMN_9LJerkk&usqp=CAU" alt="Retro Image" style="width: 500px; height: auto;">
+            <h2 class="title" >Minesweeper</h2>
+            <div class="additional-info" onclick="goToWebsite('mang.html')">
+                <p>Vajuta siia, et näha rohkem informatsiooni</p>
+                <p class="score">Score: 9</p>
+            </div>
+        </div>
+        <div class="review">
+            <img src="https://play-lh.googleusercontent.com/trsFOWkeuVbmN40ss88nfXDxXcOiH1IF3oJJOueRvcrQEf0gMYsTCzGbC6C-kgqZow" alt="Retro Image" style="width: 400px; height: auto;">
+            <h2 class="title" >Solitaire</h2>
+            <div class="additional-info" onclick="goToWebsite('mang2.html')">
+                <p>Vajuta siia, et näha rohkem informatsiooni</p>
+                <p class="score">Score: 8</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function goToWebsite(url) {
+            window.location.href = url;
+        }
+
+    </script>
 </body>
 </html>
