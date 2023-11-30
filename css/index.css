@@ -12,6 +12,12 @@
     color: #00ff00; /* Retro green color for scores */
     text-align: center;
 }
-
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #006400, #00ff00);
+    color: #000;
+  }
 
 
