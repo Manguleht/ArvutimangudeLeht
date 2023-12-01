@@ -10,82 +10,44 @@
   
 </head>
 <body>
-    <h1>Game Review Website</h1>
-
-    <div class="container" id="reviewContainer">
-        <div class="review">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJGRLVE3QDrm-yEBXOrClQ6wUdoJ_hyP93NYDOVzbXoEL6foDjD1WmGleaMN_9LJerkk&usqp=CAU" alt="Retro Image" style="width: 500px; height: auto;">
-            <h2 class="title" >Minesweeper</h2>
-            <label for="ratingInput">Rate it (1-5): </label>
-    <input type="number" id="ratingInput" list="ratings" placeholder="Enter your rating">
-
-    <datalist id="ratings">
-        <option value="1">
-        <option value="2">
-        <option value="3">
-        <option value="4">
-        <option value="5">
-    </datalist>
-
-    <button onclick="saveRating()">Save Rating</button>
-    <p id="displayRating"></p>
-    <p id="averageRating"></p>
-
-    <script>
-        const ratingInput = document.getElementById('ratingInput');
-        const displayRating = document.getElementById('displayRating');
-        const averageRating = document.getElementById('averageRating');
-
-        function saveRating() {
-            const userRating = parseInt(ratingInput.value);
-            if (userRating >= 1 && userRating <= 5) {
-                // Retrieve existing ratings from localStorage
-                const storedRatings = JSON.parse(localStorage.getItem('ratings')) || [];
-
-                // Add the new rating to the array
-                storedRatings.push(userRating);
-
-                // Save the updated ratings back to localStorage
-                localStorage.setItem('ratings', JSON.stringify(storedRatings));
-
-                // Display the saved rating
-                displayRating.textContent = `Your Rating: ${userRating}`;
-
-                // Calculate and display the average rating
-                const average = calculateAverage(storedRatings);
-                averageRating.textContent = `Average Rating: ${average.toFixed(2)}`;
-            } else {
-                alert('Please enter a valid rating between 1 and 5.');
+    <body onscroll="changeBackgroundColor()">
+        <h1>Game Review Website</h1>
+    
+        <div class="container" id="reviewContainer">
+            <div class="review">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJGRLVE3QDrm-yEBXOrClQ6wUdoJ_hyP93NYDOVzbXoEL6foDjD1WmGleaMN_9LJerkk&usqp=CAU" alt="Retro Image">
+                <h2 class="title">Minesweeper</h2>
+                <div class="additional-info" onclick="goToWebsite('mang.html')">
+                    <p>Click here to see more information</p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://play-lh.googleusercontent.com/trsFOWkeuVbmN40ss88nfXDxXcOiH1IF3oJJOueRvcrQEf0gMYsTCzGbC6C-kgqZow" alt="Retro Image">
+                <h2 class="title">Solitaire</h2>
+                <div class="additional-info" onclick="goToWebsite('mang2.html')">
+                    <p>Click here to see more information</p>
+                </div>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+        <script>
+            function goToWebsite(url) {
+                window.location.href = url;
             }
-        }
-
-        function calculateAverage(ratings) {
-            const total = ratings.reduce((sum, rating) => sum + rating, 0);
-            return total / ratings.length;
-        }
-    </script>
-            <div class="additional-info" onclick="goToWebsite('mang.html')">
-                <p>Click here to see more information</p>
-                <p class="score">Score: 9</p>
-            </div>
-        </div>
-        <div class="review">
-            <img src="https://play-lh.googleusercontent.com/trsFOWkeuVbmN40ss88nfXDxXcOiH1IF3oJJOueRvcrQEf0gMYsTCzGbC6C-kgqZow" alt="Retro Image" style="width: 400px; height: auto;">
-            <h2 class="title" >Solitaire</h2>
-            
-            <div class="additional-info" onclick="goToWebsite('mang2.html')">
-                <p>Click here to see more information</p>
-                <p class="score">Score: 8</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    <script>
-        function goToWebsite(url) {
-            window.location.href = url;
-        }
-
-    </script>
+    
+            function changeBackgroundColor() {
+                var body = document.body;
+                var scrollPosition = window.scrollY;
+    
+                var backgroundColor = 'rgb(' + (scrollPosition / 5) + ', ' + (scrollPosition / 5) + ', 0)';
+    
+                body.style.backgroundColor = backgroundColor;
+            }
+        </script>
+    
+        <footer>
+            &copy; 2023 Solitaire & Minesweeper
+        </footer>
 </body>
 </html>
