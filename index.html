@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Game Review Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Review Website</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/yhine.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  
 </head>
 <body>
     <body onscroll="changeBackgroundColor()">
+
         <h1>Game Review Website</h1>
     
         <div class="container" id="reviewContainer">
@@ -31,20 +31,6 @@
         </div>
     
         <script src="script.js"></script>
-        <script>
-            function goToWebsite(url) {
-                window.location.href = url;
-            }
-    
-            function changeBackgroundColor() {
-                var body = document.body;
-                var scrollPosition = window.scrollY;
-    
-                var backgroundColor = 'rgb(' + (scrollPosition / 5) + ', ' + (scrollPosition / 5) + ', 0)';
-    
-                body.style.backgroundColor = backgroundColor;
-            }
-        </script>
     
         <footer>
             &copy; 2023 Solitaire & Minesweeper
