@@ -42,3 +42,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+
+.iframe-container {
+  width: 100%;
+  border:"0";
+}
