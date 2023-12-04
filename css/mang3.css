@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .play-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .play-button:hover {
+    background-color: #cc3700;
+  }
+  
+  .play-button:active {
+    transform: scale(0.95);
+  }
+  
+  .review p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
