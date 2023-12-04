@@ -16,13 +16,28 @@ footer {
     color: #fff;
     border-radius: 0 0 0px 0px;
 }
-
+.title {
+    display: inline-block;
+}
 header {
+    text-align: center;
+    position: relative;
     background: #333;
     color: #fff;
-    text-align: center;
     padding: 1rem 0;
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
   }
+.home {
+    position: absolute;
+    padding-left: 1rem;
+    left: 0;
+}
+.head {
+    width: 100%;
+}
 
 iframe {
     margin-top: 20px; 
