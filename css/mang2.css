@@ -1,0 +1,44 @@
+body {
+  background: linear-gradient(to bottom, #006400, #00ff00);
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.play-button {
+  display: inline-block;
+  background-color: #03f303;
+  color: #000;
+  text-decoration: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: #01cc01;
+}
+
+.play-button:active {
+  transform: scale(0.95);
+}
+
+.review p {
+  font-size: 16px;
+  line-height: 1.6;
+}
